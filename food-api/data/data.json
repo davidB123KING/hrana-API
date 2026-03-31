@@ -1,6 +1,25 @@
 {
-  "users": [],
-  "foods": [],
-  "orders": [],
+  "users": [
+    {
+      "id": 1774940318369,
+      "name": "Jan",
+      "email": "jan@test.com"
+    }
+  ],
+  "foods": [
+    {
+      "id": 1774939999865,
+      "name": "Pizza",
+      "price": 10
+    }
+  ],
+  "orders": [
+    {
+      "id": 1774940529255,
+      "user_id": 1774940318369,
+      "status": "pending",
+      "created_at": "2026-03-31T07:02:09.255Z"
+    }
+  ],
   "orderItems": []
 }
