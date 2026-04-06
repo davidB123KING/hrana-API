@@ -9,6 +9,10 @@ export async function POST(req) {
   const body = await req.json();
   const data = readData();
 
+  if (!body.name || typeof body.price !== "number") {
+    return Response.json({ error: "Name and numeric price are required" }, { status: 400 });
+  }
+
   const newFood = {
     id: Date.now(),
     name: body.name,

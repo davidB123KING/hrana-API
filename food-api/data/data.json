@@ -3,7 +3,8 @@
     {
       "id": 1774940318369,
       "name": "Jan",
-      "email": "jan@test.com"
+      "email": "jan@test.com",
+      "password": "secret123"
     }
   ],
   "foods": [
