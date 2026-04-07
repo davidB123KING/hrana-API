@@ -1,7 +1,7 @@
 import { readData, writeData } from "@/lib/db";
 
 export async function POST(req, { params }) {
-  const { id } = params;
+  const { id } = await params;
   const { food_id, quantity } = await req.json();
 
   const data = readData();

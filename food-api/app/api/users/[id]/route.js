@@ -7,7 +7,8 @@ function sanitizeUser(user) {
 
 export async function GET(req, { params }) {
   const data = readData();
-  const id = Number(params.id);
+  const { id: paramId } = await params;
+  const id = Number(paramId);
   const user = data.users.find(item => item.id === id);
 
   if (!user) {
@@ -20,7 +21,8 @@ export async function GET(req, { params }) {
 export async function PUT(req, { params }) {
   const body = await req.json();
   const data = readData();
-  const id = Number(params.id);
+  const { id: paramId } = await params;
+  const id = Number(paramId);
   const userIndex = data.users.findIndex(item => item.id === id);
 
   if (userIndex === -1) {
@@ -54,7 +56,8 @@ export async function PUT(req, { params }) {
 
 export async function DELETE(req, { params }) {
   const data = readData();
-  const id = Number(params.id);
+  const { id: paramId } = await params;
+  const id = Number(paramId);
   const userIndex = data.users.findIndex(item => item.id === id);
 
   if (userIndex === -1) {

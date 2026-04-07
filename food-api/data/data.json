@@ -5,6 +5,12 @@
       "name": "Jan",
       "email": "jan@test.com",
       "password": "secret123"
+    },
+    {
+      "id": 1775542900991,
+      "name": "David",
+      "email": "david.bohak@scv.si",
+      "password": "davidking123"
     }
   ],
   "foods": [
@@ -12,6 +18,11 @@
       "id": 1774939999865,
       "name": "Pizza",
       "price": 10
+    },
+    {
+      "id": 1775543316826,
+      "name": "Krompir",
+      "price": 9.7
     }
   ],
   "orders": [

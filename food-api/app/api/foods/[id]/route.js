@@ -2,7 +2,8 @@ import { readData, writeData } from "@/lib/db";
 
 export async function GET(req, { params }) {
   const data = readData();
-  const id = Number(params.id);
+  const { id: paramId } = await params;
+  const id = Number(paramId);
   const food = data.foods.find(item => item.id === id);
 
   if (!food) {
@@ -15,7 +16,8 @@ export async function GET(req, { params }) {
 export async function PUT(req, { params }) {
   const body = await req.json();
   const data = readData();
-  const id = Number(params.id);
+  const { id: paramId } = await params;
+  const id = Number(paramId);
   const foodIndex = data.foods.findIndex(item => item.id === id);
 
   if (foodIndex === -1) {
@@ -40,7 +42,8 @@ export async function PUT(req, { params }) {
 
 export async function DELETE(req, { params }) {
   const data = readData();
-  const id = Number(params.id);
+  const { id: paramId } = await params;
+  const id = Number(paramId);
   const foodIndex = data.foods.findIndex(item => item.id === id);
 
   if (foodIndex === -1) {
